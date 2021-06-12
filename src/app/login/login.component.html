@@ -1,0 +1,22 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" style="background: linear-gradient(to left, #228ea7, #31b9b3 50%, #177f80 100%);">
+
+    <mat-card class="box">
+      <mat-card-header style="margin-bottom: 20px;">
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="strUserName" ngDefaultControl name="strUserName" placeholder="Username">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="strPassword" ngDefaultControl name="strPassword" placeholder="Password">
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" (click)="login()" style="background: linear-gradient(to left, #228ea7, #31b9b3 50%, #177f80 100%);">Log in</button>
+      </form>
+    </mat-card>
+  
+  </div>

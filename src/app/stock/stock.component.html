@@ -1,0 +1,69 @@
+<div class="login-wrapper" style="height: 100%;background: linear-gradient(to left, #228ea7, #31b9b3 50%, #177f80 100%);flex-direction: column !important;
+box-sizing: border-box;
+display: flex;
+place-content: center;
+align-items: center;">
+    <!-- <mat-card class="box"> -->
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <p style="font-size: 50px;font-weight: 400;margin-bottom: 50px;">The easiest way to buy and sell stocks</p>
+            <p style="font-size: 30px;font-weight: 300;margin-bottom: 50px;">Stock analysis and screening tool for investors in india</p>
+        </div>
+        <div style="width: 30%;border: 1px solid #7dd2e0;border-radius: 30px;margin-bottom: 40px;background: white;">
+            <mat-form-field class="example-full-width" style="margin-left: 20px;width: 100%;" floatLabel=never>
+                <input matInput placeholder="Company Name" [(ngModel)]="strstock" name="stock" [formControl]="searchstock" [matAutocomplete]="stock" #stockID>
+                <mat-autocomplete #stock="matAutocomplete">
+                    <mat-option *ngFor="let item of lststock" [value]="item.name" (onSelectionChange)="stockChanged(item)">
+                        {{item.name }}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+        <mat-card class="box" *ngIf="blnCard" style="border-radius: 10px;padding: 30px;">
+            <div class="row marginBottom">
+                <span style="color: #1d3850;">{{dctItem['name']}}</span>
+            </div>
+            <div class="row rowStyle">
+                <div class="col-md-4 margin10" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Market Cap</span>
+                    <span>₹{{dctItem['market_cap']}}</span>
+                </div>
+                <div class="col-md-4 margin10" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Divident Yield</span>
+                    <span>{{dctItem['dividend_yield']}}%</span>
+                </div>
+                <div class="col-md-4 margin10" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Debt Equality</span>
+                    <span>{{dctItem['debt_to_equity']}}%</span>
+                </div>
+                <div class="col-md-4 margin10 innerBox" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Current Price</span>
+                    <span>₹{{dctItem['current_market_price']}}</span>
+                </div>
+                <div class="col-md-4 margin10 innerBox" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">ROCE</span>
+                    <span>{{dctItem['roce']}}%</span>
+                </div>
+                <div class="col-md-4 margin10 innerBox" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Eps</span>
+                    <span>₹{{dctItem['eps']}}</span>
+                </div>
+                <div class="col-md-4 margin10" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Stock P/E</span>
+                    <span>{{dctItem['stock_pe']}}%</span>
+                </div>
+                <div class="col-md-4 margin10" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">ROE</span>
+                    <span>{{dctItem['roe_previous_annum']}}%</span>
+                </div>
+                <div class="col-md-4 margin10" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Reserves</span>
+                    <span>₹{{dctItem['reserves']}}</span>
+                </div>
+                <div class="col-md-4 margin10 innerBox" style="display: flex;flex-direction: row;">
+                    <span style="flex: 1;">Debt</span>
+                    <span>₹{{dctItem['debt']}}</span>
+                </div>
+            </div>
+        </mat-card>
+    <!-- </mat-card> -->
+</div>

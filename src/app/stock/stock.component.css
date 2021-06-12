@@ -1,0 +1,24 @@
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline{
+    background-color: #17000100 !important;
+}
+
+.marginBottom{
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 600
+}
+
+.margin10{
+    padding: 10px;
+}
+
+.rowStyle{
+    background: #f7f7ee;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.innerBox{
+    background: #dad4d2;
+    border-radius: 10px;
+}
