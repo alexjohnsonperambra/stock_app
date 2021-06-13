@@ -13,15 +13,6 @@ const http = require("http").Server(app)
 // require the socket.io module
 const io = require("socket.io")(http);
 
-// Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/stockapp'));
-
-app.get('/*', function(req,res) {
-    
-res.sendFile(path.join(__dirname+'/dist/stockapp/index.html'));
-});
-
-
 app.use(express.static('.'))
 var server = app.listen(process.env.PORT || 8081, () => {
     console.log('Server is started on 127.0.0.1:'+ (process.env.PORT || 8081))
@@ -40,6 +31,8 @@ app.use(express.json());
 app.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 
 const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => res.send('hello'));
 
 var request = require('request');
 

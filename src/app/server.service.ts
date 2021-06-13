@@ -9,7 +9,7 @@ import 'rxjs/add/operator/catch';
 })
 export class ServerService {
 
-  hostAddress = 'http://localhost:8081/';
+  hostAddress = 'https://stockappnodedemo.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 
