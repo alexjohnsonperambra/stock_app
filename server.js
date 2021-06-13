@@ -32,8 +32,6 @@ app.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}
 
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => res.send('hello'));
-
 var request = require('request');
 
 var path = require('path')
