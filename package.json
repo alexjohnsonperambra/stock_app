@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "nodemon server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -29,7 +29,21 @@
     "rxjs-compat": "^6.6.7",
     "sweetalert2": "^11.0.17",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "zone.js": "~0.11.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.4",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "mysql2-promise": "^0.1.4",
+    "nodemon": "^2.0.4",
+    "request": "^2.88.2",
+    "sequelize": "^6.6.2",
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.3",
